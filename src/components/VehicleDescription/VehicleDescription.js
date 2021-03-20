@@ -9,7 +9,7 @@ const VehicleDescription = (props) => {
     console.log(typeVehicle);
     const{name,img}=typeVehicle
     return (
-        <div className="d-flex justify-content-around mb-4">
+        <div className="d-flex justify-content-around align-items-center mb-4 p-3 vehicle-info">
            <img className="vehicle-image" src={img} alt=""/>
            <h5>{name}</h5>
            <p><FontAwesomeIcon icon={faUserFriends}/> 6</p>
