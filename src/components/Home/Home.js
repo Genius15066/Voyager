@@ -19,10 +19,6 @@ const Home = () => {
                     }
                 </Row>
                 </Container>
-               
-                {
-
-                }
             </div>
         </div>
     );

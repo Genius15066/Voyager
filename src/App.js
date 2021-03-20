@@ -18,15 +18,19 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/">
-            <Home/>
+            <Home />
           </Route>
 
           <Route path="/home">
-            <Home/>
+            <Home />
           </Route>
 
-          <PrivateRoute path="/destination">
-            <Destination/>
+          <PrivateRoute exact path="/destination">
+            <Destination />
+          </PrivateRoute>
+
+          <PrivateRoute path="/destination/:vehicleName">
+            <Destination />
           </PrivateRoute>
 
           <Route path="/login">
