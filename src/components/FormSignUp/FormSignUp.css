@@ -23,4 +23,11 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
   }
+  .login-btn{
+      border:none;
+      background-color: white;
+      font-size: 16px;
+      color:salmon;
+      text-decoration: underline;
+  }
   

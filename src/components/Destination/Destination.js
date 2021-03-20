@@ -7,7 +7,7 @@ const Destination = () => {
         <Container>
             <Row>
                 <Col style={{ background: 'red' }} md={4} sm={12}>
-                    this is me
+                  
                 </Col>
 
                 <Col  md={8} sm={12}>
