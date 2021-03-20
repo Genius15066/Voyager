@@ -15,7 +15,7 @@ const Home = () => {
                 <Container>
                 <Row className="d-flex justify-content-center align-items-center">
                     {
-                        vechicleType.map(type => <Vehicle vehicleType={type}></Vehicle>)
+                        vechicleType.map(type => <Vehicle id={type.id} vehicleType={type}></Vehicle>)
                     }
                 </Row>
                 </Container>

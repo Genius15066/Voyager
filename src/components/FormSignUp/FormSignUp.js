@@ -41,8 +41,8 @@ const FormSignUp = () => {
        if((e.target.name==="password")!==(e.target.name==="confirm_password")){
         const passwordValidation = { ...user };
         passwordValidation.errorPassword = "password dont match";
-     
         setUser(passwordValidation);
+        console.log(user)
        }
 
         if (isFieldValid) {
@@ -62,14 +62,15 @@ const FormSignUp = () => {
                     newUserInfo.error = " ";
                     setUser(newUserInfo);
                     console.log(result.user)
-                    const { displayName, email } = result.user;
+                    const {email } = result.user;
                     const signedInUser = {
                         name: user.name,
                         email: email
                     }
                     updateUserName(user.name);
                     setLoggedInUser(signedInUser);
-                    history.replace(from)
+                    history.replace(from);
+                    console.log(loggedInUser)
                 })
                 .catch((error) => {
                     const newUserInfo = { ...user };

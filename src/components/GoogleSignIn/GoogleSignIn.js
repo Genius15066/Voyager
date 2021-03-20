@@ -17,7 +17,7 @@ if (!firebase.apps.length) {
 
 
 const GoogleSignIn = () => {
-    const [loggedInUser, setLoggedInUser]=useContext(UserContext)
+    const [loggedInUser,setLoggedInUser]=useContext(UserContext)
     const history = useHistory();
     const location = useLocation();
     const { from } = location.state || { from: { pathname: "/" } }
@@ -32,7 +32,8 @@ const GoogleSignIn = () => {
                     email:email
                 }
                 setLoggedInUser(signedInUser);
-                history.replace(from)
+                history.replace(from);
+                console.log(loggedInUser)
             }).catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
