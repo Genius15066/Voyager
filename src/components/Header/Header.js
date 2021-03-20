@@ -6,7 +6,6 @@ import './Header.css'
 
 const Header = () => {
     const [loggedInUser]=useContext(UserContext);
-    console.log(loggedInUser)
     return (
         <div className="header">
             <Container>
