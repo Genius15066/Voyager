@@ -41,7 +41,7 @@ const FormSignUp = () => {
        if((e.target.name==="password")!==(e.target.name==="confirm_password")){
         const passwordValidation = { ...user };
         passwordValidation.errorPassword = "password dont match";
-        console.log("not match")
+     
         setUser(passwordValidation);
        }
 
