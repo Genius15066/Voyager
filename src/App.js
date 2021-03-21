@@ -7,6 +7,7 @@ import { createContext, useState } from 'react';
 import Login from './components/Login/Login';
 import Destination from './components/Destination/Destination';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import NotFound from './components/NotFound/NotFound';
 
 export const UserContext = createContext()
 
@@ -35,6 +36,9 @@ function App() {
 
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="*">
+            <NotFound/>
           </Route>
 
         </Switch>
