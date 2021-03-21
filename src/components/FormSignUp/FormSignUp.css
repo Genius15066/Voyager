@@ -3,21 +3,18 @@ input{
     border-bottom: 1px solid lightgrey;
     margin-bottom: 20px;
     padding:1% 2%;
-    width:70%
+    width:70%;
 }
 .form-signup{
     border:2px solid rgb(20, 160, 170);
-    width:50%;
+    width:60%;
     padding:3% 3%;
     border-radius: 2%;
-    box-shadow: 5px 5px 5px grey;
-    
+    box-shadow: 5px 5px 5px grey;   
 }
 input[type=submit] {
-    width: 50%;
     background-color: #4CAF50;
     color: white;
-    padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;

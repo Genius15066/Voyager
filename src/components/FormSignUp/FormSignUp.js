@@ -14,6 +14,7 @@ if (!firebase.apps.length) {
 }
 
 const FormSignUp = () => {
+
     const [newUser, setNewUser] = useState(true)
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const history = useHistory();
@@ -38,12 +39,7 @@ const FormSignUp = () => {
             const passwordNumber = /\d{1}/.test(e.target.value);
             isFieldValid = isPasswordValid && passwordNumber;
         }
-       if((e.target.name==="password")!==(e.target.name==="confirm_password")){
-        const passwordValidation = { ...user };
-        passwordValidation.errorPassword = "password dont match";
-        setUser(passwordValidation);
-        console.log(user)
-       }
+    
 
         if (isFieldValid) {
             const newUserInfo = { ...user };
@@ -61,7 +57,7 @@ const FormSignUp = () => {
                     const newUserInfo = { ...user };
                     newUserInfo.error = " ";
                     setUser(newUserInfo);
-                    console.log(result.user)
+                    console.log(user)
                     const {email } = result.user;
                     const signedInUser = {
                         name: user.name,
@@ -70,7 +66,7 @@ const FormSignUp = () => {
                     updateUserName(user.name);
                     setLoggedInUser(signedInUser);
                     history.replace(from);
-                    console.log(loggedInUser)
+                   
                 })
                 .catch((error) => {
                     const newUserInfo = { ...user };
@@ -85,20 +81,20 @@ const FormSignUp = () => {
                     const newUserInfo = { ...user };
                     newUserInfo.error = " ";
                     setUser(newUserInfo);
-                    updateUserName(user.name);
-                    const { displayName, email } = result.user;
+                    const { email } = result.user;
                     const signedInUser = {
-                        name: displayName,
+                        name: user.name,
                         email: email
                     }
+                    updateUserName(user.name);
                     setLoggedInUser(signedInUser);
                     console.log(signedInUser);
                     history.replace(from)
+                    console.log(loggedInUser)
                 })
                 .catch((error) => {
                     const newUserInfo = { ...user };
-                    newUserInfo.error = error.message;
-                    newUserInfo.success = false;
+                    newUserInfo.error=error.message;
                     setUser(newUserInfo)
                 });
         }
@@ -130,7 +126,7 @@ const FormSignUp = () => {
 
 
 
-            <form onSubmit={handleSubmit}>
+            <form  onSubmit={handleSubmit}>
                 {
                     newUser === true && <>
                         <input type="text" name="name" placeholder="Enter Your Name" onBlur={handleBlur} required /> <br />
@@ -138,8 +134,8 @@ const FormSignUp = () => {
                         <small style={{ color: 'red' }}>{user.error}</small>
                         <input type="password" id="password" name="password" placeholder="Password" onBlur={handleBlur} required /> <br />
                         <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" onBlur={handleBlur} required /> <br />
-                        <small style={{ color: 'red' }}>{user.errorPassword}</small>
-                        <input type="submit" value="Create Account" />
+                        
+                        <input type="submit" className="p-2 btn-sm" value="Create Account" />
                     </>
                 }
                 {

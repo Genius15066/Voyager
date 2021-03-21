@@ -7,8 +7,6 @@ import './Destination.css'
 
 const Destination = () => {
     const {vehicleName} =useParams();
-    console.log(vehicleName)
-    const[define,setDefine]=useState(true);
     const [result, setResult] = useState(true);
     const [fromInput, setFromInput] = useState('')
     const [toInput, setToInput] = useState('')

@@ -1,7 +1,7 @@
 .card-style{
     height:auto;
     border:none;
-    background-color:rgb(23, 192, 46);
+    background:linear-gradient(45deg,#437c25,#78ffd6);
 }
 .card-image{
     height:210px;

@@ -19,3 +19,8 @@
     font-size:35px;
     font-weight:bold;
 }
+.user-name{
+    color:teal;
+    text-shadow: 2px 2px 5px teal;
+    width:auto;
+}

@@ -13,7 +13,7 @@ const Vehicle = (props) => {
     }
 
     return (
-        <Col md={5} xs={10} className="mt-5 mb-2" >
+        <Col lg={6} xs={10} className="mt-5 mb-2" >
             <Card onClick={()=>handleVehicleType(props.vehicleType.name)} className="card-style d-flex justify-content-center align-items-center p-3">
                 <Card.Img src={img} className="card-image" />
                 <Card.Body className="text-center">

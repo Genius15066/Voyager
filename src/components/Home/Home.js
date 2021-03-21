@@ -9,6 +9,7 @@ const Home = () => {
     useEffect(() => {
         setVehicleType(data);
     }, [])
+    console.log(vechicleType)
     return (
         <div >
             <div className="background">
